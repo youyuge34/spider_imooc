@@ -39,7 +39,7 @@ class SpiderMain(object):
                 parsedUrls, parsedData = self.parser.parse(newUrl, html)  # 解析器解析html，得到更多的urls和有用的数据
                 self.urls.addNewUrls(parsedUrls)  # 将解析出的urls添加进管理池中
                 self.outputer.collectData(parsedData)  # 输出器记录下信息
-                if (mCount == 1000):
+                if (mCount == 10):
                     break
                 mCount += 1
             except:
